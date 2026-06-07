@@ -6,13 +6,13 @@ import MagneticButton from '../components/MagneticButton';
 // Reusable FAQ Accordion Component
 function FaqItem({ question, answer, isOpen, onClick }) {
   return (
-    <div className="border-b border-brand-white/5 py-5 text-left">
+    <div className="border-b border-brand-charcoal/8 py-5 text-left">
       <button 
         onClick={onClick}
-        className="w-full flex justify-between items-center text-left font-display text-lg tracking-wider text-brand-white hover:text-brand-gold transition-colors duration-300 py-2 interactive"
+        className="w-full flex justify-between items-center text-left font-display text-lg tracking-wider text-brand-charcoal hover:text-brand-coral transition-colors duration-300 py-2 interactive"
       >
         <span>{question}</span>
-        <span className="text-brand-cobalt ml-4">
+        <span className="text-brand-teal ml-4">
           {isOpen ? <Minus size={18} /> : <Plus size={18} />}
         </span>
       </button>
@@ -22,7 +22,7 @@ function FaqItem({ question, answer, isOpen, onClick }) {
           isOpen ? 'max-h-[300px] opacity-100 mt-3' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-sm text-brand-gray leading-relaxed pr-6">{answer}</p>
+        <p className="text-sm text-brand-slate leading-relaxed pr-6">{answer}</p>
       </div>
     </div>
   );
@@ -117,26 +117,26 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="w-full bg-brand-bg pt-32 pb-24 relative overflow-hidden z-10">
+    <div className="w-full bg-brand-cream pt-32 pb-24 relative overflow-hidden z-10">
       {/* Page Header */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16 text-center flex flex-col items-center">
-        <span className="text-xs uppercase tracking-widest text-brand-cobalt font-semibold">PRICING TIERS</span>
-        <h1 className="font-display font-bold text-4xl md:text-7xl tracking-wider text-brand-white mt-4 max-w-4xl uppercase">
+        <span className="text-xs uppercase tracking-widest text-brand-teal font-semibold">PRICING TIERS</span>
+        <h1 className="font-display font-bold text-4xl md:text-7xl tracking-wider text-brand-charcoal mt-4 max-w-4xl uppercase">
           TRANSPARENT PRICING.<br />
-          <span className="text-brand-cobalt">ZERO SURPRISES.</span>
+          <span className="text-brand-teal">ZERO SURPRISES.</span>
         </h1>
-        <div className="h-[2px] bg-brand-cobalt mt-6 w-32" />
+        <div className="h-[2px] bg-brand-teal mt-6 w-32" />
       </section>
 
       {/* Retainer Toggle */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-20 flex justify-center">
-        <div className="bg-brand-card border border-brand-white/5 p-1 flex rounded-sm relative z-10">
+        <div className="bg-white border border-brand-charcoal/8 p-1 flex rounded-sm relative z-10">
           <button
             onClick={() => setBillingCycle('one-time')}
             className={`px-6 py-2.5 text-xs uppercase tracking-widest font-semibold rounded-sm transition-all duration-300 interactive ${
               billingCycle === 'one-time'
-                ? 'bg-brand-cobalt text-brand-white shadow-[0_0_15px_rgba(0,71,255,0.3)]'
-                : 'text-brand-gray hover:text-brand-white'
+                ? 'bg-brand-teal text-white shadow-md'
+                : 'text-brand-slate hover:text-brand-charcoal'
             }`}
           >
             One-Time Project
@@ -145,8 +145,8 @@ export default function Pricing() {
             onClick={() => setBillingCycle('retainer')}
             className={`px-6 py-2.5 text-xs uppercase tracking-widest font-semibold rounded-sm transition-all duration-300 interactive ${
               billingCycle === 'retainer'
-                ? 'bg-brand-cobalt text-brand-white shadow-[0_0_15px_rgba(0,71,255,0.3)]'
-                : 'text-brand-gray hover:text-brand-white'
+                ? 'bg-brand-teal text-white shadow-md'
+                : 'text-brand-slate hover:text-brand-charcoal'
             }`}
           >
             Monthly Retainer
@@ -160,15 +160,15 @@ export default function Pricing() {
           {pricingTiers.map((tier, i) => (
             <div 
               key={i}
-              className={`bg-brand-card border rounded-sm p-8 md:p-10 flex flex-col justify-between relative transition-all duration-500 hover:-translate-y-2 ${
+              className={`bg-white border rounded-sm p-8 md:p-10 flex flex-col justify-between relative transition-all duration-500 hover:-translate-y-2 ${
                 tier.highlighted 
-                  ? 'border-brand-cobalt shadow-[0_0_40px_rgba(0,71,255,0.15)] lg:scale-105' 
-                  : 'border-brand-white/5 hover:border-brand-gold'
+                  ? 'border-brand-teal shadow-lg lg:scale-105' 
+                  : 'border-brand-charcoal/8 hover:border-brand-coral'
               }`}
             >
               {/* Highlight Badge */}
               {tier.highlighted && (
-                <span className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brand-gold text-brand-bg text-[10px] tracking-widest uppercase font-bold py-1 px-4 rounded-sm shadow-md">
+                <span className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brand-coral text-white text-[10px] tracking-widest uppercase font-bold py-1 px-4 rounded-sm shadow-md">
                   Most Popular
                 </span>
               )}
@@ -176,28 +176,28 @@ export default function Pricing() {
               {/* Price Details */}
               <div className="text-left">
                 <h3 className={`font-display text-3xl tracking-widest uppercase ${
-                  tier.highlighted ? 'text-brand-cobalt' : 'text-brand-white'
+                  tier.highlighted ? 'text-brand-teal' : 'text-brand-charcoal'
                 }`}>{tier.name}</h3>
                 
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="font-display text-5xl md:text-6xl font-bold text-brand-white transition-all duration-500">
+                  <span className="font-display text-5xl md:text-6xl font-bold text-brand-charcoal transition-all duration-500">
                     {billingCycle === 'one-time' ? tier.oneTimePrice : tier.monthlyPrice}
                   </span>
-                  <span className="text-xs text-brand-gray uppercase tracking-widest font-semibold">
+                  <span className="text-xs text-brand-slate uppercase tracking-widest font-semibold">
                     {billingCycle === 'one-time' ? 'Project' : '/Month'}
                   </span>
                 </div>
                 
-                <p className="text-sm text-brand-gray mt-6 leading-relaxed min-h-[72px]">
+                <p className="text-sm text-brand-slate mt-6 leading-relaxed min-h-[72px]">
                   {tier.desc}
                 </p>
 
                 {/* Features checklist */}
-                <div className="h-[1px] bg-brand-white/5 my-6" />
-                <ul className="flex flex-col gap-3.5 text-sm text-brand-gray">
+                <div className="h-[1px] bg-brand-charcoal/8 my-6" />
+                <ul className="flex flex-col gap-3.5 text-sm text-brand-slate">
                   {tier.features.map((feat, idx) => (
                     <li key={idx} className="flex gap-3 items-start">
-                      <Check size={16} className="text-brand-cobalt mt-0.5 flex-shrink-0" />
+                      <Check size={16} className="text-brand-teal mt-0.5 flex-shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -210,8 +210,8 @@ export default function Pricing() {
                   to={`/contact?package=${tier.name.toLowerCase()}&billing=${billingCycle}`}
                   className={`w-full py-4 text-xs uppercase tracking-widest font-bold block text-center rounded-sm transition-all duration-300 interactive ${
                     tier.highlighted
-                      ? 'bg-brand-cobalt text-brand-white hover:bg-brand-gold hover:text-brand-bg hover:shadow-[0_0_20px_rgba(201,168,76,0.3)]'
-                      : 'bg-brand-dark-gray border border-brand-white/10 text-brand-white hover:border-brand-gold hover:text-brand-gold'
+                      ? 'bg-brand-teal text-white hover:bg-brand-coral hover:text-white hover:shadow-lg'
+                      : 'bg-brand-sand border border-brand-charcoal/10 text-brand-charcoal hover:border-brand-coral hover:text-brand-coral'
                   }`}
                 >
                   {tier.cta}
@@ -225,11 +225,11 @@ export default function Pricing() {
       {/* Accordion FAQ Section */}
       <section className="max-w-4xl mx-auto px-6 md:px-12 mb-36 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-widest text-brand-cobalt font-semibold">COMMON CONCERNS</span>
-          <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-white tracking-widest uppercase mt-2">QUESTIONS & ANSWERS</h2>
+          <span className="text-xs uppercase tracking-widest text-brand-teal font-semibold">COMMON CONCERNS</span>
+          <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-charcoal tracking-widest uppercase mt-2">QUESTIONS & ANSWERS</h2>
         </div>
 
-        <div className="border-t border-brand-white/5">
+        <div className="border-t border-brand-charcoal/8">
           {faqs.map((faq, index) => (
             <FaqItem
               key={index}
@@ -243,18 +243,18 @@ export default function Pricing() {
       </section>
 
       {/* Custom Scopes CTA */}
-      <section className="border-t border-brand-white/5 pt-24 bg-[#0a0a0a]">
+      <section className="border-t border-brand-charcoal/8 pt-24 bg-brand-sand">
         <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6">
-          <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-white tracking-widest uppercase">
+          <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-charcoal tracking-widest uppercase">
             NEED A BESPOKE CONFIGURATION?
           </h2>
-          <p className="text-brand-gray text-base max-w-lg mb-4">
+          <p className="text-brand-slate text-base max-w-lg mb-4">
             If you need an enterprise WebGL platform, a custom database structure, or specialized integrations, we will build a custom scope for you.
           </p>
           <MagneticButton>
             <Link 
               to="/contact" 
-              className="px-8 py-4 bg-brand-cobalt text-brand-white text-xs uppercase tracking-widest font-semibold hover:bg-brand-gold hover:text-brand-bg hover:shadow-[0_0_30px_rgba(201,168,76,0.4)] transition-all duration-300 block"
+              className="px-8 py-4 bg-brand-teal text-white text-xs uppercase tracking-widest font-semibold hover:bg-brand-coral hover:text-white hover:shadow-lg transition-all duration-300 block"
             >
               Book a Free Call
             </Link>

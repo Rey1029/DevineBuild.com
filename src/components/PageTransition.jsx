@@ -5,8 +5,8 @@ import gsap from 'gsap';
 export default function PageTransition({ children }) {
   const location = useLocation();
   const [displayChildren, setDisplayChildren] = useState(children);
-  const curtainBlueRef = useRef(null);
-  const curtainDarkRef = useRef(null);
+  const curtainTealRef = useRef(null);
+  const curtainCreamRef = useRef(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
@@ -24,18 +24,18 @@ export default function PageTransition({ children }) {
     });
 
     // 1. Reset curtains off-screen left
-    gsap.set(curtainBlueRef.current, { x: '-100%' });
-    gsap.set(curtainDarkRef.current, { x: '-100%' });
+    gsap.set(curtainTealRef.current, { x: '-100%' });
+    gsap.set(curtainCreamRef.current, { x: '-100%' });
 
-    // 2. Animate blue curtain in
-    tl.to(curtainBlueRef.current, {
+    // 2. Animate teal curtain in
+    tl.to(curtainTealRef.current, {
       x: '0%',
       duration: 0.5,
       ease: 'power3.in',
     });
 
-    // 3. Animate dark curtain in, slightly staggered
-    tl.to(curtainDarkRef.current, {
+    // 3. Animate cream curtain in, slightly staggered
+    tl.to(curtainCreamRef.current, {
       x: '0%',
       duration: 0.5,
       ease: 'power3.in',
@@ -47,15 +47,15 @@ export default function PageTransition({ children }) {
       window.scrollTo(0, 0);
     });
 
-    // 5. Slide blue curtain out to the right
-    tl.to(curtainBlueRef.current, {
+    // 5. Slide teal curtain out to the right
+    tl.to(curtainTealRef.current, {
       x: '100%',
       duration: 0.5,
       ease: 'power3.out',
     });
 
-    // 6. Slide dark curtain out to the right
-    tl.to(curtainDarkRef.current, {
+    // 6. Slide cream curtain out to the right
+    tl.to(curtainCreamRef.current, {
       x: '100%',
       duration: 0.5,
       ease: 'power3.out',
@@ -72,20 +72,20 @@ export default function PageTransition({ children }) {
 
   return (
     <div className="relative min-h-screen w-full">
-      {/* Blue curtain overlay */}
+      {/* Teal curtain overlay */}
       <div 
-        ref={curtainBlueRef} 
-        className="fixed inset-0 bg-brand-cobalt z-[99990] pointer-events-none"
+        ref={curtainTealRef} 
+        className="fixed inset-0 bg-brand-teal z-[99990] pointer-events-none"
         style={{ transform: 'translateX(-100%)' }}
       />
 
-      {/* Dark luxury curtain overlay with gold stripe */}
+      {/* Cream curtain overlay with coral stripe */}
       <div 
-        ref={curtainDarkRef} 
-        className="fixed inset-0 bg-[#0c0c0c] border-l-2 border-brand-gold z-[99991] pointer-events-none flex items-center justify-center"
+        ref={curtainCreamRef} 
+        className="fixed inset-0 bg-brand-cream border-l-2 border-brand-coral z-[99991] pointer-events-none flex items-center justify-center"
         style={{ transform: 'translateX(-100%)' }}
       >
-        <div className="font-display text-4xl text-brand-white tracking-widest uppercase opacity-20">
+        <div className="font-display text-4xl text-brand-charcoal tracking-widest uppercase opacity-15">
           DEVINEDGE
         </div>
       </div>

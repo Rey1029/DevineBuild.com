@@ -66,7 +66,7 @@ export default function MagneticButton({ children, className = "", strength = 25
   return (
     <div 
       ref={containerRef} 
-      className={`inline-block interactive ${className}`} 
+      className={`inline-block ${className}`} 
       {...props}
     >
       {children}

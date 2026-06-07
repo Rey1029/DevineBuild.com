@@ -33,9 +33,9 @@ export default function ThreeDna() {
     const dnaGroup = new THREE.Group();
 
     const sphereGeo = new THREE.SphereGeometry(0.06, 12, 12);
-    const blueMat = new THREE.MeshBasicMaterial({ color: 0x0047ff });
-    const goldMat = new THREE.MeshBasicMaterial({ color: 0xc9a84c });
-    const lineMat = new THREE.LineBasicMaterial({ color: 0x0047ff, transparent: true, opacity: 0.3 });
+    const blueMat = new THREE.MeshBasicMaterial({ color: 0x2a9d8f });
+    const goldMat = new THREE.MeshBasicMaterial({ color: 0xe07a5f });
+    const lineMat = new THREE.LineBasicMaterial({ color: 0x2a9d8f, transparent: true, opacity: 0.3 });
 
     // Arrays to hold coordinates for lines
     const pointsStrand1 = [];

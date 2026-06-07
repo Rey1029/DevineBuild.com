@@ -7,144 +7,41 @@
   --font-syne: 'Syne', sans-serif;
   --font-sans: 'DM Sans', 'Outfit', sans-serif;
   
-  --color-brand-bg: #080808;
-  --color-brand-cobalt: #0047FF;
-  --color-brand-gold: #C9A84C;
+  /* Cheerful, calm color palette */
+  --color-brand-cream: #FAFAF7;
+  --color-brand-sand: #F0EDE6;
+  --color-brand-teal: #2A9D8F;
+  --color-brand-coral: #E07A5F;
+  --color-brand-charcoal: #2D3436;
+  --color-brand-slate: #636E72;
   --color-brand-white: #FFFFFF;
-  --color-brand-gray: #A0A0A0;
-  --color-brand-dark-gray: #121212;
-  --color-brand-card: #0F0F0F;
-  --color-brand-card-hover: #161616;
 }
 
 /* Global Reset & Base */
 html, body {
-  background-color: #080808;
-  color: #FFFFFF;
+  background-color: #FAFAF7;
+  color: #2D3436;
   font-family: 'DM Sans', 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* Hide cursor for custom cursor experience on desktop */
-  cursor: none;
-}
-
-/* Enable default cursor on mobile devices */
-@media (max-width: 1024px) {
-  html, body {
-    cursor: auto !important;
-  }
-  .custom-cursor {
-    display: none !important;
-  }
+  cursor: auto;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #FAFAF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C1C1C;
+  background: #d4d0c8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0047FF;
-}
-
-/* Custom Cursor Elements */
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #0047FF;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background-color 0.2s;
-}
-
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 71, 255, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
-}
-
-/* Hover cursor adjustments */
-.cursor-hover .cursor-dot {
-  width: 4px;
-  height: 4px;
-  background-color: #C9A84C;
-}
-
-.cursor-hover .cursor-ring {
-  width: 60px;
-  height: 60px;
-  border-color: #C9A84C;
-  background-color: rgba(201, 168, 76, 0.05);
-}
-
-/* Background Grids and Vignette */
-.grid-overlay {
-  position: fixed;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(0, 71, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 71, 255, 0.02) 1px, transparent 1px);
-  background-size: 80px 80px;
-  background-position: center center;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.vignette-overlay {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at center, transparent 20%, rgba(8, 8, 8, 0.95) 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.noise-overlay {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200%;
-  background: transparent url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E") repeat;
-  opacity: 0.08;
-  pointer-events: none;
-  z-index: 9999;
-  animation: grain 8s steps(10) infinite;
-}
-
-@keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  95% { transform:translate(-10%, 10%) }
+  background: #2A9D8F;
 }
 
 /* Smooth Scrolling setup (Lenis) */
@@ -166,27 +63,27 @@ html.lenis {
 
 /* Animations and Utilities */
 .text-stroke {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+  -webkit-text-stroke: 1px rgba(45, 52, 54, 0.2);
   color: transparent;
 }
 .text-stroke-hover:hover {
-  -webkit-text-stroke: 1px #0047FF;
+  -webkit-text-stroke: 1px #2A9D8F;
   color: transparent;
 }
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(15, 15, 15, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(45, 52, 54, 0.06);
 }
 
-.glass-panel-cobalt {
-  background: rgba(0, 71, 255, 0.03);
+.glass-panel-teal {
+  background: rgba(42, 157, 143, 0.04);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 71, 255, 0.15);
+  border: 1px solid rgba(42, 157, 143, 0.12);
 }
 
 /* Infinite text scroll marquee */

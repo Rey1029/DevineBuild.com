@@ -30,7 +30,7 @@ export default function ThreeGear() {
       // Ring 1 (Outer - Cobalt)
       ringGeo1 = new THREE.TorusGeometry(1.6, 0.12, 8, 36);
       ringMat1 = new THREE.MeshBasicMaterial({
-        color: 0x0047ff,
+        color: 0x2a9d8f,
         wireframe: true,
         transparent: true,
         opacity: 0.15,
@@ -41,7 +41,7 @@ export default function ThreeGear() {
       // Ring 2 (Middle - Gold)
       ringGeo2 = new THREE.TorusGeometry(1.15, 0.08, 6, 28);
       ringMat2 = new THREE.MeshBasicMaterial({
-        color: 0xc9a84c,
+        color: 0xe07a5f,
         wireframe: true,
         transparent: true,
         opacity: 0.12,
@@ -52,7 +52,7 @@ export default function ThreeGear() {
       // Ring 3 (Inner - Cobalt)
       ringGeo3 = new THREE.TorusGeometry(0.7, 0.05, 6, 20);
       ringMat3 = new THREE.MeshBasicMaterial({
-        color: 0x0047ff,
+        color: 0x2a9d8f,
         wireframe: true,
         transparent: true,
         opacity: 0.20,

@@ -4,8 +4,6 @@ import gsap from 'gsap';
 import Lenis from 'lenis';
 
 // Global Layout Components
-import CustomCursor from './components/CustomCursor';
-import NoiseBackground from './components/NoiseBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PageTransition from './components/PageTransition';
@@ -76,36 +74,30 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-brand-bg text-brand-white relative antialiased selection:bg-brand-cobalt selection:text-brand-white">
+    <div className="min-h-screen bg-brand-cream text-brand-charcoal relative antialiased selection:bg-brand-teal selection:text-white">
       {/* 1. Pre-loader overlay */}
       {loading && (
-        <div className="preloader-container fixed inset-0 bg-[#080808] z-[999999] flex flex-col items-center justify-center">
+        <div className="preloader-container fixed inset-0 bg-brand-cream z-[999999] flex flex-col items-center justify-center">
           {/* Logo assembly particle placeholder drawing */}
           <svg className="w-24 h-24 mb-6" viewBox="0 0 100 100" fill="none" stroke="currentColor">
             <path 
               className="draw-path" 
               d="M20 20 L80 20 L80 80 L20 80 Z M20 50 L80 50 M50 20 L50 80" 
-              stroke="#0047FF" 
+              stroke="#2A9D8F" 
               strokeWidth="2" 
             />
           </svg>
-          <div className="font-display text-2xl tracking-widest text-brand-white uppercase animate-[pulse_1.5s_infinite]">
-            DEVIN<span className="text-brand-cobalt">EDGE</span>
+          <div className="font-display text-2xl tracking-widest text-brand-charcoal uppercase animate-[pulse_1.5s_infinite]">
+            DEVIN<span className="text-brand-teal">EDGE</span>
           </div>
-          <span className="text-[9px] text-brand-gray tracking-wider uppercase mt-4 opacity-50">Loading cinematic workspace...</span>
+          <span className="text-[9px] text-brand-slate tracking-wider uppercase mt-4 opacity-50">Loading your experience...</span>
         </div>
       )}
 
-      {/* 2. Custom cursor dot + expanding ring */}
-      <CustomCursor />
-
-      {/* 3. Global ambient noise, grid line, and radial vignette overlays */}
-      <NoiseBackground />
-
-      {/* 4. Global header navbar navigation */}
+      {/* 2. Global header navbar navigation */}
       <Navbar />
 
-      {/* 5. Routable viewport with curtain transitions */}
+      {/* 3. Routable viewport with curtain transitions */}
       <PageTransition>
         <main className="w-full">
           <Routes>
@@ -123,7 +115,7 @@ export default function App() {
         </main>
       </PageTransition>
 
-      {/* 6. Global footer columns */}
+      {/* 4. Global footer columns */}
       <Footer />
     </div>
   );
