@@ -50,10 +50,10 @@ export default function About() {
   ];
 
   const milestones = [
-    { year: '2023', title: 'The Genesis', desc: 'DevinEdge founded by a group of creatives and developers aiming to disrupt traditional web standards.' },
-    { year: '2024', title: 'Going Global', desc: 'Delivered 50+ projects and expanded operations to serve brands in 4 different continents.' },
-    { year: '2025', title: 'Interactive Era', desc: 'Adopted WebGL, Three.js, and immersive 3D technology as standard for all high-end creations.' },
-    { year: '2026', title: 'The Future', desc: 'Pioneering next-generation innovative web applications and premium custom digital products.' }
+    { year: '2025', title: 'The Genesis', desc: 'DevinEdge founded by a group of creatives and developers aiming to disrupt traditional web standards.' },
+    { year: '2026', title: 'Going Global', desc: 'Adopted WebGL, Three.js, and immersive 3D technology as standard for all high-end creations.' },
+    { year: '2027', title: 'Interactive Era', desc: 'ExpandeING operations to serve brands in many different continents.' },
+    { year: '2028', title: 'The Future', desc: 'Pioneering next-generation innovative web applications and premium custom digital products.' }
   ];
 
   const team = [
@@ -85,7 +85,7 @@ export default function About() {
             Founded with a vision to merge structural software engineering with art, DevinEdge craft-engineers digital experiences for businesses who refuse to settle for templates.
           </p>
           <p className="text-brand-text-secondary text-base leading-relaxed">
-            Our team consists of specialists in WebGL, React architectures, UI animations, and branding strategy. We treat every layout as a custom gallery piece.
+            Our team consists of specialists in AI , WebGL, React architectures, UI animations, and branding strategy. We treat every layout as a custom gallery piece.
           </p>
         </div>
 
