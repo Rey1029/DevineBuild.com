@@ -54,7 +54,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-2.5 text-sm text-brand-text-secondary mb-4">
             <li><Link to="/contact" className="hover:text-brand-accent-gold transition-colors duration-300">Get in Touch</Link></li>
             <li><Link to="/careers" className="hover:text-brand-accent-gold transition-colors duration-300">Careers</Link></li>
-            <li className="text-xs text-brand-text-secondary/60">hello@devinedge.com</li>
+            <li className="text-xs text-brand-text-secondary/60">devinedge99@gmail.com</li>
           </ul>
           
           {/* Socials row */}
