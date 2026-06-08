@@ -138,7 +138,7 @@ export default function About() {
               "We believe the internet should be beautiful. The modern web has become cluttered with generic layouts and uninspired grids. Our mission is to restore visual expression and physical tactile responsiveness to software, crafting websites that operate like luxury timepieces."
             </p>
             <p className="text-brand-text-secondary/70 text-xs mt-2 italic">
-              - Prior experience: Design Architect at high-end European agencies and consultant for luxury tech firms.
+              - Prior experience: An IT student who is an AI expert, worked 24/7 for clients and their businesses. Now running his own agency.
             </p>
           </div>
         </div>
