@@ -57,10 +57,10 @@ export default function About() {
   ];
 
   const team = [
-    { name: 'Xavier Devine', role: 'Founder & Principal Architect', fact: 'Can code in 4 languages while drinking cold espresso.' },
-    { name: 'Elena Rostova', role: 'Lead Creative Director', fact: 'Collects modular synthesizers and designs in 3D.' },
-    { name: 'Marcus Chen', role: 'Senior WebGL Specialist', fact: 'Spends weekends building custom keyboards.' },
-    { name: 'Aria Vance', role: 'Full-Stack Developer', fact: 'Climbs mountains and builds secure API structures.' }
+    { name: 'Sumedh Jadhav', role: 'Founder & Principal Architect', fact: 'Can code with the effeciency of AI and peak creativity while drinking cold espresso.' },
+    { name: 'Bruklin Ego', role: 'Lead Creative Director', fact: 'Collects modular synthesizers and designs in 3D.' },
+    { name: 'Rey Walker', role: 'Senior WebGL Specialist', fact: 'Does not Spends weekends building custom graphics because we are AI experts.' },
+    { name: 'Rushi Ken', role: 'Full-Stack Developer', fact: 'Climbs mountains and builds secure API structures while having KFC.' }
   ];
 
   return (
@@ -69,7 +69,7 @@ export default function About() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-24">
         <span className="text-xs uppercase tracking-widest text-brand-accent-gold font-semibold">OUR AGENCY IDENTITY</span>
         <h1 className="font-display font-semibold text-5xl md:text-7xl xl:text-8xl tracking-tight leading-none text-brand-text-primary mt-4 max-w-4xl">
-          WE ARE <span className="text-brand-accent-purple">/</span> DEVINEDGE
+          WE ARE <span className="text-brand-accent-purple"></span> DEVINEDGE
         </h1>
         {/* Draw Line under header */}
         <div ref={lineRef} className="h-[2px] bg-gradient-to-r from-brand-accent-gold via-brand-accent-gold-light to-transparent mt-6 w-0" />
