@@ -128,7 +128,7 @@ export default function About() {
 
           <div className="w-full lg:w-2/3 flex flex-col gap-4 text-left">
             <span className="text-xs uppercase tracking-widest text-brand-accent-purple font-semibold">LEADERSHIP SPOTLIGHT</span>
-            <h3 className="font-display font-semibold text-3xl md:text-4xl text-brand-text-primary tracking-wide">XAVIER DEVINE</h3>
+            <h3 className="font-display font-semibold text-3xl md:text-4xl text-brand-text-primary tracking-wide">SUMEDH JADHAV</h3>
             <span className="text-xs text-brand-accent-gold uppercase tracking-widest font-semibold mt-1">Founder & CEO</span>
             
             {/* Gold Line */}
