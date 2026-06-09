@@ -77,7 +77,7 @@ export default function Contact() {
     
     const waMessage = `Hello DevinEdge! 🚀\nI would like to start a project. Here are my details:\n\n👤 *Name:* ${formData.name}\n📧 *Email:* ${formData.email}\n🏢 *Company:* ${formData.company || 'Personal'}\n🛠️ *Project Type:* ${projectTypeLabel}\n💰 *Estimated Budget:* ${formData.budget}\n\n📝 *Message:* \n${formData.message}`;
     
-    const waUrl = `https://wa.me/927972060502?text=${encodeURIComponent(waMessage)}`;
+    const waUrl = `https://wa.me/917972060502?text=${encodeURIComponent(waMessage)}`;
     
     // Redirect user to WhatsApp in a new tab
     window.open(waUrl, '_blank');
